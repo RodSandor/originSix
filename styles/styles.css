@@ -348,4 +348,101 @@ main .section .title {
   margin-bottom: .75rem;
   font-size: 1.5rem;
 }
+
+#testimonials {
+  background: white;
+}
+
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#testimonials .container header {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+#testimonials .container blockquote {
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  padding: 2rem;
+}
+
+#testimonials .container blockquote p {
+  margin-bottom: 1.5rem;
+  text-indent: 1.875rem;
+  position: relative;
+  color: #0f241d;
+}
+
+#testimonials .container blockquote p span {
+  font: 700 2.5rem serif;
+  position: absolute;
+  color: #6ab99d;
+  left: -1.875rem;
+  top: -.375rem;
+}
+
+#testimonials .container blockquote cite {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#testimonials .container blockquote cite img {
+  margin-right: .5rem;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 2rem;
+  width: 2rem;
+}
+
+#contacts .grid {
+  gap: 4rem;
+}
+
+#contacts .grid .text p {
+  margin-bottom: 2rem;
+}
+
+#contacts .grid .links ul.grid {
+  gap: 2rem;
+}
+
+#contacts .grid .links ul.grid li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contacts .grid .links ul.grid li i {
+  color: #6ab99d;
+}
+
+#contacts .grid .btn i,
+#contacts .grid ul li i {
+  margin-right: .625rem;
+  font-size: 1.5rem;
+}
+
+.swiper .swiper-slide {
+  padding: 4rem 1rem;
+  height: auto;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background: #6ab99d;
+}
 /*# sourceMappingURL=styles.css.map */

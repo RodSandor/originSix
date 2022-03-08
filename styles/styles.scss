@@ -310,3 +310,87 @@ main {
         }
     }
 }
+
+// TESTIMONIALS
+#testimonials {
+    background: white;
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        header {
+            margin-right: 1.5rem;
+            margin-left: 1.5rem;
+            margin-bottom: 0;
+        }
+        blockquote {
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+            border-radius: 0.25rem;
+            padding: 2rem;
+            p {
+                margin-bottom: 1.5rem;
+                text-indent: 1.875rem;
+                position: relative;
+                color: $title-color;
+                span {
+                    font: 700 2.5rem serif;
+                    position: absolute;
+                    color: $base-color;
+                    left: -1.875rem;
+                    top: -.375rem;
+                }
+            }
+            cite {
+                align-items: center;
+                font-style: normal;
+                display: flex;
+                img {
+                    margin-right: .5rem;
+                    clip-path: circle();
+                    object-fit: cover;
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+        }
+    }
+}
+
+// CONTACTS
+#contacts {
+    .grid {
+        gap: 4rem;
+        .text {
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+        .links ul.grid {
+            gap: 2rem;
+            li {
+                align-items: center;
+                display: flex;
+                i {
+                    color: $base-color;
+                }
+            }
+        }
+        .btn i,
+        ul li i {
+            margin-right: .625rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Swiper
+.swiper {
+    .swiper-slide {
+        padding: 4rem 1rem;
+        height: auto;
+    }
+    .swiper-pagination-bullet {
+        &-active {
+            background: $base-color;
+        }
+    }
+}
