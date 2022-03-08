@@ -27,6 +27,19 @@ html body {
   -webkit-font-smoothing: antialiased;
 }
 
+html body .logo {
+  font: 700 1.31rem "Poppins", sans-serif;
+  color: #0f241d;
+}
+
+html body .logo.logo-alt span {
+  color: #fafafa;
+}
+
+html body .logo span {
+  color: #6ab99d;
+}
+
 html body .title {
   font: 700 1.875rem "Poppins", sans-serif;
   -webkit-font-smoothing: auto;
@@ -53,16 +66,16 @@ main {
   margin-top: calc(4.5rem + 2rem);
 }
 
-main .container {
+.container {
   margin: 0 auto;
   width: 90%;
 }
 
-main .container img {
+.container img {
   max-width: 900px;
 }
 
-main .container .btn {
+.container .btn {
   font: 500 1rem 'DM Sans', sans-serif;
   background-color: #6ab99d;
   -webkit-transition: background 0.3s;
@@ -79,30 +92,56 @@ main .container .btn {
   height: 3.5rem;
 }
 
-main .container .btn :hover {
+.container .btn :hover {
   background: #43cb9c;
 }
 
-main .grid {
+.grid {
   display: -ms-grid;
   display: grid;
   gap: 2rem;
 }
 
-main .section {
+.section {
   padding: 5rem 0;
 }
 
-main .section header {
+.section header {
   margin-bottom: 4rem;
 }
 
-main .section header strong {
+.section header strong {
   color: #6ab99d;
 }
 
-main .section .title {
+.section .title {
   margin-bottom: 1rem;
+}
+
+.back-to-top {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fafafa;
+  background: #6ab99d;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  padding: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.5rem;
+  line-height: 0;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.back-to-top.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 #header {
@@ -182,15 +221,6 @@ main .section .title {
   top: -1.5rem;
   -webkit-transition: .2s;
   transition: .2s;
-}
-
-#header nav .logo {
-  font: 700 1.31rem "Poppins", sans-serif;
-  color: #0f241d;
-}
-
-#header nav .logo span {
-  color: #6ab99d;
 }
 
 #header nav .menu {
@@ -435,6 +465,37 @@ main .section .title {
 #contacts .grid ul li i {
   margin-right: .625rem;
   font-size: 1.5rem;
+}
+
+footer {
+  background: #6ab99d;
+}
+
+footer .social a {
+  display: inline-block;
+  margin-right: 2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+footer .social a:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+footer .social i {
+  color: #fafafa;
+  font-size: 1.5rem;
+}
+
+footer .brand .logo {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+footer .brand p {
+  color: #fafafa;
+  margin-bottom: 0.75rem;
 }
 
 .swiper .swiper-slide {

@@ -14,15 +14,31 @@ for (const element of links) {
     })  
 };
 
-const header = document.querySelector('#header');
-const navHeight = header.offsetHeight
+function changeHeaderOnScroll() {
+  const header = document.querySelector('#header');
+  const navHeight = header.offsetHeight;
 
-window.addEventListener('scroll', ()=> {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll');
   } else {
     header.classList.remove('scroll');
   }
+}
+
+// Back to top btn
+function backToTop() {
+  const backToTopBtn = document.querySelector('.back-to-top');
+
+  if (window.scrollY >= 560) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+}
+
+window.addEventListener('scroll', ()=> {
+  changeHeaderOnScroll();
+  backToTop();
 });
 
 // Slider Swiper
@@ -49,5 +65,8 @@ scrollReveal.reveal(`
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contacts .tedxt, #contact .links
+  #contacts .tedxt, #contact .links,
+  #footer .brand, #footer .social
 `, {interval: 100})
+
+

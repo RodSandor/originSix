@@ -1,3 +1,6 @@
+@import './colors.scss';
+@import './variables.scss';
+
 //  RESET
 * {
     box-sizing: border-box;
@@ -15,27 +18,24 @@
     }
 }
 
-// VARIABLES
-$hue: 159;
-$header-height: calc(4.5rem + 2rem);
-
-$base-color: hsla($hue, 36%, 57%, 1);
-$base-color-sencond: hsla($hue, 65%, 88%, 1);
-$base-color-alt: hsla($hue, 57%, 53%, 1);
-
-$title-color: hsla($hue, 41%, 10%, 1);
-
-$text-color: hsla(0, 0%, 98%, 1);
-$text-color-light: hsla(0, 0%, 98%, 1);
-
-$body-color: hsla(0, 0%, 98%, 1);
-
 // BASE
 html {
     scroll-behavior: smooth;
     body {
         font: 400 1rem "DM Sans", sans-serif;
         -webkit-font-smoothing: antialiased;
+        .logo {
+            font: 700 1.31rem "Poppins", sans-serif;
+            color: $title-color;
+            &.logo-alt {
+                span {
+                    color: $body-color;
+                }
+            }
+            span {
+                color: $base-color;
+            }
+        }
         .title {
             font: 700 1.875rem "Poppins", sans-serif;
             -webkit-font-smoothing: auto;
@@ -61,48 +61,74 @@ html {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             height: 1px;
         }
+
     }
 }
 
 // LAYOUT
 main {
     margin-top: $header-height;
-    .container {
-        margin: 0 auto;
-        width: 90%;
-        img {
-            max-width: 900px;
-        }
-        .btn {
-            font: 500 1rem 'DM Sans', sans-serif;
-            background-color: $base-color;
-            transition: background 0.3s;
-            color: $text-color-light;
-            border-radius: 0.25rem;
-            display: inline-flex;
-            align-items: center;
-            padding: 0 2rem;
-            height: 3.5rem;
-            :hover {
-                background: $base-color-alt;
-            }
+}
+.container {
+    margin: 0 auto;
+    width: 90%;
+    img {
+        max-width: 900px;
+    }
+    .btn {
+        font: 500 1rem 'DM Sans', sans-serif;
+        background-color: $base-color;
+        transition: background 0.3s;
+        color: $text-color-light;
+        border-radius: 0.25rem;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 2rem;
+        height: 3.5rem;
+        :hover {
+            background: $base-color-alt;
         }
     }
-    .grid {
-        display: grid;
-        gap: 2rem;
+}
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+.section {
+    padding: 5rem 0;
+    header {
+        margin-bottom: 4rem;
+        strong {
+            color: $base-color;
+        }
     }
-    .section {
-        padding: 5rem 0;
-        header {
-            margin-bottom: 4rem;
-            strong {
-                color: $base-color;
-            }
-        }
-        .title {
-            margin-bottom: 1rem;
-        }
+    .title {
+        margin-bottom: 1rem;
+    }
+}
+.back-to-top {
+    transform: translateY(100%);
+    transition: 0.3s;
+    
+    color: $text-color-light;
+    background: $base-color;
+    
+    clip-path: circle();
+    padding: 0.5rem;
+    
+    visibility: hidden;
+    opacity: 0;
+    
+    font-size: 1.5rem;
+    line-height: 0;
+        
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    &.show {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -166,13 +192,6 @@ main {
             top: -1.5rem;
 
             transition:  .2s;
-        }
-        .logo {
-            font: 700 1.31rem "Poppins", sans-serif;
-            color: $title-color;
-            span {
-                color: $base-color;
-            }
         }
         .menu {
             visibility: hidden;
@@ -382,6 +401,35 @@ main {
     }
 }
 
+// FOOTER
+footer {
+    background: $base-color;
+    .social {
+        a {
+            display: inline-block;
+            margin-right: 2rem;
+            transition: .3s;
+            &:hover {
+                transform: translateY(-8px);
+            }
+        }
+        i {
+            color: $text-color-light;
+            font-size: 1.5rem;
+        }
+    }
+    .brand {
+        .logo {
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        p {
+            color: $text-color-light;
+            margin-bottom: 0.75rem;
+        }
+    }
+}
+
 // Swiper
 .swiper {
     .swiper-slide {
@@ -393,4 +441,13 @@ main {
             background: $base-color;
         }
     }
+}
+
+// media Queries
+@media (min-width: 1200px) {
+    
+}
+
+@media (min-width: 992px) {
+    
 }
